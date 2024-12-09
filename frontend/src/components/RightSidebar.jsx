@@ -22,7 +22,7 @@ const RightSidebar = ({ selectedSong, setSelectedSong, songs = [] }) => {
       howlInstance.unload(); // Unload the previous song
     }
 
-    const filePath = `http://localhost:3000${songs[index]?.filePath}`;
+    const filePath = `https://music-player-using-howler-library.onrender.com${songs[index]?.filePath}`;
 
     const newHowl = new Howl({
       src: [filePath],
@@ -86,7 +86,7 @@ const RightSidebar = ({ selectedSong, setSelectedSong, songs = [] }) => {
   // Ensure the first song is loaded on initial render
   useEffect(() => {
     if (songs.length > 0) {
-      loadSong(0); // Load the first song
+      setSelectedSong(songs[0]); // Optionally, set the first song in UI without autoplay
     }
   }, [songs]);
 
