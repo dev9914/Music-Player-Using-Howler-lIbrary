@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:4000",'https://music-player-using-howler-library.onrender.com'],
+    origin: ["http://localhost:4000",'https://music-player-using-howler-library-w73b.onrender.com'],
     methods: ["GET,PATCH,POST,DELETE,PUT"],
   })
 );
